@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datter | Dashboard</title>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- chart.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="container nav">
+        <h2 class="logo">Datter: User Dashboard</h2>
+        <i class="fa-solid fa-bars hamburger"></i>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+      <div class="container main">
+        <!-- sidebar -->
+        <aside class="menu-items">
+          <div class="menu-item">
+            <p class="menu-item-text">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+              data
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <p class="menu-item-text">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+              reports_csv
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <p class="menu-item-text">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+              datasets
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <p class="menu-item-text">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+              list
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <p class="menu-item-text">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+              visualization
+            </p>
+          </div>
+        </aside>
+
+        <!-- main -->
+        <div class="main-dashboard">
+          <!-- chart -->
+          <div class="chart-section-main">
+            <section class="chart-section">
+              <canvas id="chart"></canvas>
+            </section>
+          </div>
+
+          <!-- stats -->
+          <div class="stats">
+            <div class="stat">
+              <p class="stat-text">Visualization : 1</p>
+            </div>
+            <div class="stat">
+              <p class="stat-text">Dimensions</p>
+            </div>
+            <div class="stat">
+              <p class="stat-text">Percentage change</p>
+            </div>
+            <div class="stat">
+              <p class="stat-text">Mean</p>
+            </div>
+            <div class="stat">
+              <p class="stat-text">Dimensions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let myChart = document.getElementById('chart').getContext('2d');
+
+      let lineChart = new Chart(myChart, {
+        type: 'line',
+        data: {
+          labels: [
+            'Jan 2022',
+            'Feb 2022',
+            'Mar 2022',
+            'Apr 2022',
+            'May 2022',
+            'Jun 2022',
+            'Jul 2022',
+            'Aug 2022',
+            'sep 2022',
+            'oct 2022',
+            'nov 2022',
+            'dec 2022',
+            'Jan 2022',
+            'Feb 2022',
+            'Mar 2022',
+            'Apr 2022',
+            'May 2022',
+            'Jun 2022',
+            'Jul 2022',
+            'Aug 2022',
+            'sep 2022',
+            'oct 2022',
+            'nov 2022',
+            'dec 2022',
+          ],
+          datasets: [
+            {
+              label: 'some data',
+              data: [
+                1.12, 1.15, 1.49, 1.95, 1.71, 2.08, 1.98, 2.45, 2.65, 3.04,
+                3.02, 3.14, 3.15, 3.12, 3.15, 3.49, 3.95, 3.71, 4.08, 4.98,
+                3.45, 2.65, 3.04, 3.02, 3.14, 3.15,
+              ],
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

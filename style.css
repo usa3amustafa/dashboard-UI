@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #252525;
+  background-color: #fefefe;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* nav */
+nav {
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hamburger {
+  font-size: 2rem;
+}
+
+/* main */
+main {
+  height: calc(100vh - 96px);
+  overflow: scroll;
+  scroll-: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+main {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.menu-items {
+  padding: 1rem 0;
+  border-right: 1px solid #b4b4b4;
+  height: 100%;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.menu-item + .menu-item {
+  margin-top: 1rem;
+}
+
+/* chart */
+#chart {
+  color: #fefefe;
+}
+
+.chart-section-main {
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.chart-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* stats */
+.stats {
+  padding: 1rem 5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.stat {
+  padding: 1rem 0;
+}
